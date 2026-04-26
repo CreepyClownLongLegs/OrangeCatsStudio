@@ -1,0 +1,54 @@
+.founders-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  .founder-card {
+    background: white;
+    border: 2px solid var(--beige-deeper);
+    border-radius: 18px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 5px 5px 0 var(--beige-deeper);
+    position: relative;
+  }
+  .founder-avatar {
+    width: 100px; height: 100px;
+    margin: 0 auto 1rem;
+    position: relative;
+  }
+  .founder-card h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.4rem; color: var(--ink);
+    margin-bottom: 0.3rem;
+  }
+  .founder-role {
+    font-family: 'Caveat', cursive;
+    font-size: 1rem; color: var(--orange);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .founder-card p { font-size: 0.9rem; color: var(--ink-light); line-height: 1.7; }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .value-card {
+    background: var(--orange-pale);
+    border: 1.5px solid var(--orange-muted);
+    border-radius: 14px;
+    padding: 1.5rem;
+    position: relative;
+  }
+  .value-card:nth-child(even) { transform: rotate(-0.8deg); }
+  .value-card:nth-child(odd) { transform: rotate(0.5deg); }
+  .value-card h4 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.2rem; color: var(--orange);
+    margin-bottom: 0.4rem;
+  }
+  .value-card p { font-size: 0.88rem; color: var(--ink-light); line-height: 1.6; }

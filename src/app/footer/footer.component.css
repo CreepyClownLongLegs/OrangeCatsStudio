@@ -1,0 +1,36 @@
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.8);
+    padding: 3rem 4rem 2rem;
+    position: relative; z-index: 1;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .footer-brand .logo { color: var(--orange-muted); }
+  .footer-brand p { font-size: 0.9rem; margin-top: 0.8rem; line-height: 1.6; color: rgba(255,255,255,0.6); }
+  footer h5 {
+    font-family: 'Caveat', cursive;
+    font-size: 1rem; font-weight: 700;
+    color: var(--orange-muted);
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  footer ul { list-style: none; }
+  footer ul li { margin-bottom: 0.4rem; }
+  footer ul li a {
+    font-size: 0.9rem; color: rgba(255,255,255,0.65);
+    text-decoration: none; transition: color 0.15s;
+    cursor: pointer;
+  }
+  footer ul li a:hover { color: var(--orange-muted); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1.5rem;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-bottom p { font-size: 0.85rem; color: rgba(255,255,255,0.4); }
