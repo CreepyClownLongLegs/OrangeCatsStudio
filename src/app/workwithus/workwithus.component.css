@@ -52,7 +52,98 @@
     padding: 3px 10px;
     border-radius: 20px;
   }
-
+  .pricing-grid {
+    margin-top: 1rem;
+  }
+  .pricing-card {
+    background: white;
+    border: 2px solid var(--beige-deeper);
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: 5px 5px 0 var(--beige-deeper);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .pricing-card.featured {
+    border-color: var(--orange);
+    box-shadow: 6px 6px 0 rgba(232,99,10,0.2);
+  }
+  .pricing-badge {
+    font-family: 'Caveat', cursive;
+    font-size: 1rem;
+    color: var(--orange);
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    display: inline-block;
+  }
+  .pricing-price {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+  .pricing-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+  .pricing-list li {
+    font-size: 0.95rem;
+    color: var(--ink-light);
+    line-height: 1.7;
+    padding-left: 1rem;
+    position: relative;
+  }
+  .pricing-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--orange);
+    font-size: 1rem;
+    top: 0.05rem;
+  }
+  .pricing-addons {
+    margin-top: 2rem;
+  }
+  .addons-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+  .addons-list span {
+    border-radius: 999px;
+    padding: 0.75rem 1rem;
+    font-family: 'Caveat', cursive;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .addon-tag.blue { background: #4c7bc7; border: 1.5px solid #3a62a1; color: white; }
+  .addon-tag.pink { background: #de5d8a; border: 1.5px solid #b5456f; color: white; }
+  .addon-tag.green { background: #4b965a; border: 1.5px solid #356f40; color: white; }
+  .pricing-section {
+    background: linear-gradient(135deg, rgba(232,99,10,0.18), rgba(245,240,232,0.92) 35%, rgba(232,99,10,0.08));
+    border-radius: 28px;
+    padding: 4rem 3rem;
+    margin-bottom: 3rem;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.6);
+  }
+  .pricing-section .section-label::before {
+    content: '★';
+  }
+  .pricing-section .section-title {
+    color: var(--ink);
+  }
+  .pricing-button {
+    margin-top: 1.5rem;
+    display: inline-block;
+  }
    section { padding: 5rem 4rem; position: relative; z-index: 1; }
   .section-label {
     font-family: 'Caveat', cursive;

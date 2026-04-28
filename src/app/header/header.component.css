@@ -1,0 +1,41 @@
+﻿nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 38px;
+  gap: 1rem;
+  position: relative;
+  z-index: 30;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-flag {
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.45rem;
+}
+
+.lang-flag.active,
+.lang-flag:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.28);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.nav-links li {
+  list-style: none;
+}
