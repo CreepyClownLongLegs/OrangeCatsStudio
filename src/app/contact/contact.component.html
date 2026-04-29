@@ -41,54 +41,44 @@
       </div>
 
       <!-- Form -->
-      <div class="contact-form-wrap">
-        <h3 style="font-family:'Fredoka One',cursive; font-size:1.6rem; color:var(--ink); margin-bottom:1.5rem;">Send us a message 🐾</h3>
-        <div class="form-cats-row">
-          <div class="form-row" style="margin-bottom:0;">
-            <label>First name</label>
-            <input type="text" placeholder="Your name">
-          </div>
-          <div class="form-row" style="margin-bottom:0;">
-            <label>Last name</label>
-            <input type="text" placeholder="Last name">
-          </div>
-        </div>
-        <div class="form-row" style="margin-top:1.2rem;">
-          <label>Email</label>
-          <input type="email" placeholder="you@company.com">
-        </div>
-        <div class="form-row">
-          <label>What's this about?</label>
-          <select>
-            <option value="">— Choose a category —</option>
-            <option value="project">Start a project (web / app dev)</option>
-            <option value="seo">SEO & content strategy</option>
-            <option value="collab">Content collaboration</option>
-            <option value="partnership">Partnership / business</option>
-            <option value="studio">Studio products (game / boat platform)</option>
-            <option value="other">Something else</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label>Tell us what you're working on</label>
-          <textarea placeholder="Give us the real picture. What are you building, what do you need, and what's the timeline? The more context, the better our reply."></textarea>
-        </div>
-        <div class="form-row">
-          <label>Budget range (optional but helpful)</label>
-          <select>
-            <option value="">— Rough budget —</option>
-            <option>Under €1,000</option>
-            <option>€1,000 – €5,000</option>
-            <option>€5,000 – €15,000</option>
-            <option>€15,000 – €30,000</option>
-            <option>€30,000+</option>
-            <option>Retainer (ongoing)</option>
-          </select>
-        </div>
-        <button class="btn-primary" style="width:100%; text-align:center; cursor:pointer;" onclick="handleFormSubmit()">
-          Send it 🐾
-        </button>
-        <p style="font-size:0.82rem; color:var(--brown-light); margin-top:0.8rem; text-align:center; font-family:'Caveat',cursive;">No spam. No newsletter you didn't ask for. Just us, reading your message.</p>
-      </div>
+      <form #form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div class="form-cats-row">
+    <div class="form-row">
+      <label>First name</label>
+      <input type="text" formControlName="firstName" placeholder="Your name">
+    </div>
+
+    <div class="form-row">
+      <label>Last name</label>
+      <input type="text" formControlName="lastName" placeholder="Last name">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label>Email</label>
+    <input type="email" formControlName="email" placeholder="you@company.com">
+  </div>
+
+  <div class="form-row">
+    <label>What's this about?</label>
+    <select formControlName="category">
+      <option value="">— Choose a category —</option>
+      <option value="project">Start a project</option>
+      <option value="seo">SEO & content</option>
+      <option value="collab">Collaboration</option>
+      <option value="partnership">Partnership</option>
+      <option value="other">Something else</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <label>Message</label>
+    <textarea formControlName="message"></textarea>
+  </div>
+
+  <button class="btn-primary" type="submit">
+    Send it 🐾
+  </button>
+</form>
     </div>
   </section>
