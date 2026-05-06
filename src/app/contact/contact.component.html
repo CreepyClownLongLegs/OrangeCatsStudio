@@ -1,84 +1,99 @@
+<div class="page-hero" style="background:var(--orange-pale);">
+  <h1 class="section-title" style="font-size:clamp(2.2rem,4vw,3.5rem);">
+    Contact Orange Cats Studio to help your business grow online!
+  </h1>
+  <p class="section-sub">
+    Whether you need a new Website, a rebuild, stronger SEO Visibility, clearer Digital Marketing Strategy or a focused Add-on, this is where the next step starts. Choose the right category and send Orange Cats Studio the key details.
+  </p>
+</div>
+<section>
+  <div class="contact-layout">
+    <!-- Sidebar -->
+    <div class="contact-sidebar">
+      <div class="sticky" style="position:relative; transform:rotate(-2deg); margin-bottom:1.2rem;">
+        <strong style="display:block; margin-bottom:0.4rem; font-size:1.1rem;">Need help choosing?🐾</strong>
+        Start with an intro call if you are unsure which service fits your business.
+      </div>
+      <div class="sticky pink" style="position:relative; transform:rotate(-1deg); margin-bottom:1.2rem;">
+        <strong style="display:block; margin-bottom:0.4rem; font-size:1.1rem;">⏱ Response time</strong>
+        Usually within 1 Business day after the form is sent.
+      </div>
+      <div class="sticky blue" style="position:relative; transform:rotate(1.5deg); margin-bottom:1.2rem;">
+        <strong style="display:block; margin-bottom:0.4rem; font-size:1.1rem;">🌐 Languages</strong>
+        English, German, Croatian, Bosnian and Serbian.
+      </div>
+      <div class="sticky green" style="position:relative; transform:rotate(1deg);">
+        <strong style="display:block; margin-bottom:0.4rem; font-size:1.1rem;">📍 Remote work</strong>
+        Based in Europe but we are working remotely with clients across different markets.
+      </div>
+<div style="margin-top:2rem; padding:1.5rem; background:var(--orange-pale); border:1.5px dashed var(--orange-muted); border-radius:14px;">
+  <h4 style="font-family:'Fredoka One',cursive; font-size:1.1rem; color:var(--orange); margin-bottom:0.6rem;">
+    🐾 The first step should make sense
+  </h4>
+  <p style="font-size:0.9rem; color:var(--ink-light); line-height:1.7; margin:0;">
+    Orange Cats Studio does not start with a one-size-fits-all answer. We first look at the business, the current online presence and the goal behind the request, so that the next step fits the business perfectly.
+  </p>
+</div>
+    </div>
+    <!-- Form -->
+    <form #form [formGroup]="contactForm" (ngSubmit)="onSubmit()" aria-label="Contact Orange Cats Studio">
 
-
-  <div class="page-hero" style="background:var(--orange-pale);">
-    <div class="section-label">Contact</div>
-    <h1 class="section-title" style="font-size:clamp(2.2rem,4vw,3.5rem);">Say hello. We don't bite.<br>(The cats might.)</h1>
-    <p class="section-sub">Whether you want to start a project, pitch a collab, or just talk about something interesting — this is the page for that.</p>
-  </div>
-
-  <section>
-    <div class="contact-layout">
-      <!-- Sidebar -->
-      <div class="contact-sidebar">
-        <div class="sticky" style="position:relative; transform:rotate(-2deg); margin-bottom:1.2rem;">
-          <strong style="display:block; margin-bottom:0.4rem; font-size:1.1rem;">📧 Email</strong>
-          hello&amp;rangecatsstudio.com
+      <div class="form-cats-row">
+        <div class="form-row">
+          <label for="firstName">First name</label>
+          <input
+            id="firstName"
+            type="text"
+            formControlName="firstName"
+            placeholder="Your name"
+            autocomplete="given-name"
+            required>
         </div>
-        <div class="sticky blue" style="position:relative; transform:rotate(1.5deg); margin-bottom:1.2rem;">
-          <strong style="display:block; margin-bottom:0.4rem; font-size:1.1rem;">💼 LinkedIn</strong>
-          /company/orangecatsstudio
-        </div>
-        <div class="sticky pink" style="position:relative; transform:rotate(-1deg); margin-bottom:1.2rem;">
-          <strong style="display:block; margin-bottom:0.4rem; font-size:1.1rem;">⏱ Response time</strong>
-          Usually within 24 hours. We actually read everything.
-        </div>
-        <div class="sticky green" style="position:relative; transform:rotate(1deg);">
-          <strong style="display:block; margin-bottom:0.4rem; font-size:1.1rem;">🌍 Based</strong>
-          Fully remote. We work with clients everywhere.
-        </div>
-
-        <div style="margin-top:2rem; padding:1.5rem; background:var(--orange-pale); border:1.5px dashed var(--orange-muted); border-radius:14px;">
-          <h4 style="font-family:'Fredoka One',cursive; font-size:1.1rem; color:var(--orange); margin-bottom:0.6rem;">What we're looking for</h4>
-          <ul style="font-size:0.9rem; color:var(--ink-light); line-height:1.8; list-style:none;">
-            <li>✓ Founders with real problems</li>
-            <li>✓ Brands that want to grow properly</li>
-            <li>✓ Collaborators who move fast</li>
-            <li>✓ Interesting partnerships</li>
-            <li>✗ "Can you do it for equity?"</li>
-            <li>✗ Spec work requests</li>
-          </ul>
+        <div class="form-row">
+          <label for="lastName">Last name</label>
+          <input
+            id="lastName"
+            type="text"
+            formControlName="lastName"
+            placeholder="Last name"
+            autocomplete="family-name">
         </div>
       </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          placeholder="you@company.com"
+          autocomplete="email"
+          required>
+      </div>
+      <div class="form-row">
+        <label for="category">How can Orange Cats Studio help you?</label>
+        <select id="category" formControlName="category">
+          <option value="">— Choose a category —</option>
+          <option value="intro-call">Intro call</option>
+          <option value="basic-package">Basic package</option>
+          <option value="advanced-package">Advanced package</option>
+          <option value="premium-package">Premium package</option>
+          <option value="add-on">Add-on</option>
+          <option value="other">Other request</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          formControlName="message"
+          placeholder="Share what you need help with, what already exists and what you would like to move forward. Links, markets, languages or timelines are helpful if they are already clear.">
+        </textarea>
+      </div>
+      <button class="btn-primary" type="submit">
+        Send Your Message 🐾
+      </button>
 
-      <!-- Form -->
-      <form #form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-  <div class="form-cats-row">
-    <div class="form-row">
-      <label>First name</label>
-      <input type="text" formControlName="firstName" placeholder="Your name">
-    </div>
+    </form>
 
-    <div class="form-row">
-      <label>Last name</label>
-      <input type="text" formControlName="lastName" placeholder="Last name">
-    </div>
   </div>
-
-  <div class="form-row">
-    <label>Email</label>
-    <input type="email" formControlName="email" placeholder="you@company.com">
-  </div>
-
-  <div class="form-row">
-    <label>What's this about?</label>
-    <select formControlName="category">
-      <option value="">— Choose a category —</option>
-      <option value="project">Start a project</option>
-      <option value="seo">SEO & content</option>
-      <option value="collab">Collaboration</option>
-      <option value="partnership">Partnership</option>
-      <option value="other">Something else</option>
-    </select>
-  </div>
-
-  <div class="form-row">
-    <label>Message</label>
-    <textarea formControlName="message"></textarea>
-  </div>
-
-  <button class="btn-primary" type="submit">
-    Send it 🐾
-  </button>
-</form>
-    </div>
-  </section>
+</section>
